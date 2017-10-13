@@ -34,3 +34,38 @@ const productsJSON = () => {
 	});
 };
 
+var productGetter = () => {
+	categoriesJSON().then((results) => {
+		results.forEach((producto) => {
+			products.push(producto);
+		});
+		return typesJSON();
+	}).then((results2) => {
+		results2.forEach((producto) => {
+			products.push(producto);
+		});
+		return productsJSON();
+	}).then((results3) => {
+		results3.forEach((producto) => {
+			products.push(producto);
+		});
+		console.log("products", products);
+		makeProducts();
+	});
+};
+
+const makeProducts = () => {
+	products.forEach((producto) => {
+		dom(producto);
+	});
+};
+
+const initializer = () => {
+	productGetter();
+};
+
+const getProducts = () => {
+	return products;
+};
+
+module.exports = {initializer: initializer, getProducts: getProducts};
