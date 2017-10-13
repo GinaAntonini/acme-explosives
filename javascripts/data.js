@@ -4,6 +4,7 @@ const dom = require('./dom');
 
 let products = [];
 
+
 const categoriesJSON = () => {
 	return new Promise((resolve, reject) => {
 		$.ajax('./db/categories.json').done((data1) => {
@@ -34,34 +35,9 @@ const productsJSON = () => {
 	});
 };
 
-var productGetter = () => {
-	categoriesJSON().then((results) => {
-		results.forEach((producto) => {
-			products.push(producto);
-		});
-		return typesJSON();
-	}).then((results2) => {
-		results2.forEach((producto) => {
-			products.push(producto);
-		});
-		return productsJSON();
-	}).then((results3) => {
-		results3.forEach((producto) => {
-			products.push(producto);
-		});
-		console.log("products", products);
-		makeProducts();
-	});
-};
-
-const makeProducts = () => {
-	products.forEach((producto) => {
-		dom(producto);
-	});
-};
-
 const initializer = () => {
-	productGetter();
+	console.log("products", products);
+	dom(products);
 };
 
 const getProducts = () => {
