@@ -1,19 +1,148 @@
 {
-    "products": [{
-        "fairy_sparklers": {
-            "id": 0,
-            "type": 0,
-            "name": "Fairy Sparklers",
-            "description": "Multi-colored sparklers that are safe for any age."
+    "products": [
+        {
+        "bang_boom_bird_snappers": {
+            "id": 3,
+            "type": 2,
+            "name": "Bang Boom Bird Snappers",
+            "description": "Scare away the birds without a fake owl."
         }
     	},
-    	{
-        "fairy_sparklers": {
-            "id": 0,
-            "type": 0,
-            "name": "Fairy Sparklers",
-            "description": "Multi-colored sparklers that are safe for any age."
+        {
+        "deer_poppers": {
+            "id": 5,
+            "type": 2,
+            "name": "Deer Poppers",
+            "description": "Keep the deer out of the garden."
         }
-    	}
+        },
+        {
+        "raccoon scarers": {
+            "id": 7,
+            "type": 2,
+            "name": "Raccoon Scarers",
+            "description": "Scare away the birds without a fake owl."
+        }
+        },
+    	{
+        "champagne_bottle_confetti": {
+            "id": 9,
+            "type": 4,
+            "name": "Champagne Bottle Confetti Poppers",
+            "description": "Point away and pop 'em!"
+        }
+    	},
+        {
+        "popcorn": {
+            "id": 9,
+            "type": 4,
+            "name": "Popcorn",
+            "description": "A delicious snack with a safe pop."
+        }
+        },
+        {
+        "balloons": {
+            "id": 9,
+            "type": 4,
+            "name": "Balloons",
+            "description": "Pretty until they pop."
+        }
+        },
+        {
+        "sparklers": {
+            "id": 11,
+            "type": 6,
+            "name": "Sparklers",
+            "description": "Family friendly and safe for kids to use."
+        }
+        },
+        {
+        "roman_candles": {
+            "id": 11,
+            "type": 6,
+            "name": "Roman Candles",
+            "description": "A firework giving off a series of flaming colored balls and sparks.."
+        }
+        },
+        {
+        "bottle_rockets": {
+            "id": 11,
+            "type": 6,
+            "name": "Bottle Rockets",
+            "description": "A small rocket that is approximately the size of a standard firecracker, one and one-half inches long, with a thin stick attached to it that is approximately 12 inches in length. Bottle rockets can contain whistle effects and may contain a report (loud bang)."
+        }
+        },
+        {
+        "ammonia_nitrate": {
+            "id": 13,
+            "type": 8,
+            "name": "Miracle Gro",
+            "description": "Fertilizer mixed with diesel makes a big bomb."
+        }
+        },
+        {
+        "instant_cold_packs": {
+            "id": 13,
+            "type": 8,
+            "name": "Instant Cold Packs",
+            "description": "Extract ammonium nitrate from your instant cold packs."
+        }
+        },
+        {
+        "osmocote_azalea": {
+            "id": 13,
+            "type": 8,
+            "name": "Osmocote Azalea",
+            "description": "Rhododendron Plant Food"
+        }
+        },
+        {
+        "nitropaste": {
+            "id": 15,
+            "type": 10,
+            "name": "Nitropaste",
+            "description": "Can be rubbed on a person's skin to revive the heart."
+        }
+        },
+        {
+        "door_remover": {
+            "id": 15,
+            "type": 10,
+            "name": "Door Remover",
+            "description": "Can be sprayed on a car to blast off the door."
+        }
+        },
+        {
+        "nitropaste": {
+            "id": 15,
+            "type": 10,
+            "name": "Nitrostat",
+            "description": "Spray on your throat when you have a sore throat."
+        }
+        },
+        {
+        "block_tnt": {
+            "id": 17,
+            "type": 12,
+            "name": "Block TNT",
+            "description": "Block form of TNT"
+        }
+        },
+        {
+        "cartridge_tnt": {
+            "id": 17,
+            "type": 12,
+            "name": "Cartridge TNT",
+            "description": "Cartridge form of TNT"
+        }
+        },
+        {
+        "powdered_tnt": {
+            "id": 17,
+            "type": 12,
+            "name": "Powdered TNT",
+            "description": "Powdered form of TNT"
+        }
+        }
 ]
 }

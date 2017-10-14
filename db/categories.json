@@ -2,15 +2,11 @@
     "categories": [
         {
             "id": 0,
-            "name": "Dynamite"
+            "name": "Friendly Explosives"
         },
         {
             "id": 1,
-            "name": "Gunpowder"
-        },
-        {
-            "id": 2,
-            "name": "TNT"
+            "name": "Not-so-Friendly Explosives"
         }
     ]
 }
