@@ -37,26 +37,31 @@ const productsJSON = () => {
 	});
 };
 
+
 var explosivesGetter = () => {
-	categoriesJSON().then((results) => {
-		results.forEach((boom) => {
-			categories.push(boom);
+	categoriesJSON().then((catResults) => {
+		catResults.forEach((category) => {
+			categories.push(category);
 		});
+		console.log("categories", categories);
 		return typesJSON();
-	}).then((results2) => {
-		results2.forEach((boom) => {
-			types.push(boom);
+	}).then((typeResults) => {
+		typeResults.forEach((type) => {
+			types.push(type);
 		});
+		console.log("types", types);
 		return productsJSON();
-	}).then((results3) => {
-		results3.forEach((boom) => {
-			products.push(boom);
+	}).then((productResults) => {
+		productResults.forEach((product) => {
+			products.push(product);
 		});
+		makeProducts();
 		console.log("products", products);
 		}).catch((error) => {
 		console.log('error', error);
 	});
 };
+
 
 const makeProducts = () => {
 	products.forEach((boom) =>{
@@ -72,4 +77,4 @@ const initializer = () => {
 // 	return products;
 // };
 
-module.exports = {initializer: initializer, explosivesGetter: explosivesGetter};
+module.exports = {initializer, explosivesGetter};
