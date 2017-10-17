@@ -1,3 +1,7 @@
 body {
 	background-color: #4682B4;
 }
+
+.productCard {
+	border: 6px solid #cbf8ff;
+}

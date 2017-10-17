@@ -39,7 +39,7 @@ const productsJSON = () => {
 
 
 var explosivesGetter = () => {
-	categoriesJSON().then((catResults) => {
+	return categoriesJSON().then((catResults) => {
 		catResults.forEach((category) => {
 			categories.push(category);
 		});
@@ -63,18 +63,23 @@ var explosivesGetter = () => {
 };
 
 
+// const makeProducts = () => {
+// 	products.forEach((product) =>{
+// 		dom.domString(product);
+// 	});
+// };
+
 const makeProducts = () => {
-	products.forEach((boom) =>{
-		dom(boom);
+	if (categories.id === types.category) {
+		products.forEach((product) =>{
+		dom.domString(product);
 	});
+}
 };
 
 const initializer = () => {
 	explosivesGetter();
 };
 
-// const getProducts = () => {
-// 	return products;
-// };
 
 module.exports = {initializer, explosivesGetter};
