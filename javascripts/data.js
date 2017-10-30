@@ -37,39 +37,70 @@ const productsJSON = () => {
 	});
 };
 
+
 var explosivesGetter = () => {
-	categoriesJSON().then((results) => {
-		results.forEach((boom) => {
-			categories.push(boom);
+	return categoriesJSON().then((catResults) => {
+		catResults.forEach((category) => {
+			categories.push(category);
 		});
+		console.log("categories", categories);
 		return typesJSON();
-	}).then((results2) => {
-		results2.forEach((boom) => {
-			types.push(boom);
+	}).then((typeResults) => {
+		typeResults.forEach((type) => {
+			categories.forEach((category) => {
+					if (type.category === category.id){
+						type.categoryId = category.id;
+						type.categoryName = category.name;
+					}
+				});
+			types.push(type);
 		});
+		console.log("types", types);
 		return productsJSON();
-	}).then((results3) => {
-		results3.forEach((boom) => {
-			products.push(boom);
+	}).then((productResults) => {
+		productResults.forEach((product) => {
+			let key = Object.keys(product)[0];
+			product = product[key];
+			types.forEach((type) => {
+					if (product.type === type.id){
+						product.typeName = type.name;
+						product.categoryId = type.categoryId;
+						product.categoryName = type.categoryName;
+					}
+				});
+			products.push(product);
 		});
+		makeProducts();
 		console.log("products", products);
 		}).catch((error) => {
 		console.log('error', error);
 	});
 };
 
+			
+// $('#friendly').click((event) => {
+// 	dom.domString(event);
+// });
+
+// $('#not-so-friendly').click((event) => {
+// 	dom.domString(event);
+// });
+
+// if (categoryType === 'Friendly') {
+
+// 	} else if (categoryType === 'Not-so-friendly'){
+
+
 const makeProducts = () => {
-	products.forEach((boom) =>{
-		dom(boom);
+	products.forEach((product) =>{
+		dom.domString(product);
 	});
 };
+
 
 const initializer = () => {
 	explosivesGetter();
 };
 
-// const getProducts = () => {
-// 	return products;
-// };
 
-module.exports = {initializer: initializer, explosivesGetter: explosivesGetter};
+module.exports = {initializer, explosivesGetter};
