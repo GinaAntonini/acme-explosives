@@ -86,9 +86,7 @@ var explosivesGetter = () => {
 // 	dom.domString(event);
 // });
 
-// if (categoryType === 'Friendly') {
 
-// 	} else if (categoryType === 'Not-so-friendly'){
 
 
 const makeProducts = () => {
