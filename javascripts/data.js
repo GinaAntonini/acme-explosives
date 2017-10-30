@@ -47,12 +47,27 @@ var explosivesGetter = () => {
 		return typesJSON();
 	}).then((typeResults) => {
 		typeResults.forEach((type) => {
+			categories.forEach((category) => {
+					if (type.category === category.id){
+						type.categoryId = category.id;
+						type.categoryName = category.name;
+					}
+				});
 			types.push(type);
 		});
 		console.log("types", types);
 		return productsJSON();
 	}).then((productResults) => {
 		productResults.forEach((product) => {
+			let key = Object.keys(product)[0];
+			product = product[key];
+			types.forEach((type) => {
+					if (product.type === type.id){
+						product.typeName = type.name;
+						product.categoryId = type.categoryId;
+						product.categoryName = type.categoryName;
+					}
+				});
 			products.push(product);
 		});
 		makeProducts();
@@ -62,20 +77,26 @@ var explosivesGetter = () => {
 	});
 };
 
+			
+// $('#friendly').click((event) => {
+// 	dom.domString(event);
+// });
 
-// const makeProducts = () => {
-// 	products.forEach((product) =>{
-// 		dom.domString(product);
-// 	});
-// };
+// $('#not-so-friendly').click((event) => {
+// 	dom.domString(event);
+// });
+
+// if (categoryType === 'Friendly') {
+
+// 	} else if (categoryType === 'Not-so-friendly'){
+
 
 const makeProducts = () => {
-	if (categories.id === types.category) {
-		products.forEach((product) =>{
+	products.forEach((product) =>{
 		dom.domString(product);
 	});
-}
 };
+
 
 const initializer = () => {
 	explosivesGetter();

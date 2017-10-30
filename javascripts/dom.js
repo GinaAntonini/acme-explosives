@@ -7,9 +7,9 @@ const outputDiv = $('#productHolder');
 const domString = (product) => {
 	var productString = "";
 		productString += `<div class="col-sm-4 productCard">`;
-		productString += `<h1 class="productName">${product.name}</h1>`;
-		productString += `<h2 class="productType">${product.type}</h1>`;
-		productString += `<h2 class="productCategory">${product.category}</h1>`;
+		productString += `<h2 class="productName">${product.name}</h1>`;
+		productString += `<h2 class="productType">${product.typeName}</h1>`;
+		productString += `<h2 class="productCategory">${product.categoryName}</h1>`;
 		productString += `<h2 class="productDescription">${product.description}</h1>`;
 		productString += `</div>`;
 	writeToDom(productString);
